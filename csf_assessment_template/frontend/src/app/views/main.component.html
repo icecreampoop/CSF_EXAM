@@ -1,1 +1,20 @@
-<!-- View 1 -->
+<div>
+    <webcam [width]="width" [height]="height" [trigger]="trigger" [imageType]="mimeType" (imageCapture)="snapshot($event)">
+    </webcam>
+</div>
+
+<div>
+    <p>Aspect: 
+        <span>
+            <input type="radio" name="aspectratio" value=282 (change)="onChange($event)" checked/>16:9
+            <input type="radio" name="aspectratio" value=375 (change)="onChange($event)">4:3
+            <input type="radio" name="aspectratio" value=333 (change)="onChange($event)">3:2
+            <input type="radio" name="aspectratio" value=500 (change)="onChange($event)">1:1
+        </span>
+    </p>
+</div>
+
+
+<div>
+    <button type="button" (click)="snap()" [routerLink]="['/upload']">Snap</button>
+</div>

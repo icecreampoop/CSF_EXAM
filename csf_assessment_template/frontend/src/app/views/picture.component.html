@@ -1,1 +1,31 @@
-<!-- View 2 -->
+<form [formGroup]="form" (ngSubmit)="upload()">
+    <table>
+        <tr>
+            <td>
+                <img [src]="imageData" class="thumbnail"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Title:
+            </td>
+            <td>
+                <input type="text" size="30" formControlName="title"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Comments:
+            </td>
+            <td>
+                <textarea cols="30" rows="4" formControlName="comments"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" (click)="backConfirm()">Back</button>
+                <button type="submit" [disabled]="form.invalid">POST</button>
+            </td>  
+        </tr>
+    </table>
+</form>
