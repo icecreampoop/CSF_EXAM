@@ -15,8 +15,6 @@ import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
 import com.amazonaws.services.s3.model.PutObjectResult;
 
-import ibf2023.csf.backend.AppConfig;
-
 @Repository
 public class ImageRepository {
 
@@ -50,7 +48,8 @@ public class ImageRepository {
         }
 
 
-		return id;
+		System.out.println("https://super-secret-demo-project.sgp1.cdn.digitaloceanspaces.com/" + id);
+		return "https://super-secret-demo-project.sgp1.cdn.digitaloceanspaces.com/" + id;
 	}
 }
 

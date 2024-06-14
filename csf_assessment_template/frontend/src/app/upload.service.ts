@@ -14,7 +14,7 @@ export class UploadService {
 
     const formData = new FormData();
     formData.set("title", form['title']);
-    formData.set("comment", form['comment']);
+    formData.set("comments", form['comments']);
     formData.set("imageFile", imageFile);
     const currentDateAndTime = this.datePipe.transform(new Date(), 'yyyy-MM-dd HH:mm:ss') || "date error";
     formData.set("dateTime", currentDateAndTime);
